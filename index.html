@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kho Truyện Online</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>📚 Kho Truyện Online</h1>
+
+    <input 
+      type="text" 
+      id="search"
+      placeholder="Tìm truyện..."
+    >
+  </header>
+
+  <main>
+
+    <div class="story-grid" id="storyList">
+
+      <!-- Truyện 1 -->
+      <div class="story-card">
+
+        <img 
+          src="https://picsum.photos/300/400?random=1"
+        >
+
+        <div class="story-info">
+          <h2>Hành Trình Ma Pháp</h2>
+
+          <p>
+            Một thiếu niên bước vào thế giới phép thuật.
+          </p>
+
+          <button onclick="openStory(
+            'Hành Trình Ma Pháp',
+            'Chương 1: Khởi đầu...',
+            'https://picsum.photos/300/400?random=1'
+          )">
+            Đọc truyện
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Truyện 2 -->
+      <div class="story-card">
+
+        <img 
+          src="https://picsum.photos/300/400?random=2"
+        >
+
+        <div class="story-info">
+          <h2>Kiếm Thần Tái Sinh</h2>
+
+          <p>
+            Một kiếm thần trở lại sau 1000 năm.
+          </p>
+
+          <button onclick="openStory(
+            'Kiếm Thần Tái Sinh',
+            'Chương 1: Trùng sinh...',
+            'https://picsum.photos/300/400?random=2'
+          )">
+            Đọc truyện
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Truyện 3 -->
+      <div class="story-card">
+
+        <img 
+          src="https://picsum.photos/300/400?random=3"
+        >
+
+        <div class="story-info">
+          <h2>Hệ Thống Vô Địch</h2>
+
+          <p>
+            Main nhận được hệ thống bá đạo.
+          </p>
+
+          <button onclick="openStory(
+            'Hệ Thống Vô Địch',
+            'Chương 1: Kích hoạt hệ thống...',
+            'https://picsum.photos/300/400?random=3'
+          )">
+            Đọc truyện
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- Popup đọc truyện -->
+  <div class="reader" id="reader">
+
+    <div class="reader-content">
+
+      <span class="close" onclick="closeReader()">
+        ✖
+      </span>
+
+      <img id="readerImage">
+
+      <h2 id="readerTitle"></h2>
+
+      <div id="readerText"></div>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
